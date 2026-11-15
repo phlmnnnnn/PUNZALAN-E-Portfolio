@@ -2,7 +2,7 @@
 
 Personal portfolio website showcasing my projects, publication work, and skills in software development and data analysis.
 
-**Live site:** [https://phlmnnnnn.github.io](https://phlmnnnnn.github.io/PUNZALAN-E-Portfolio/)
+**Live site:** https://phlmnnnnn.github.io/PUNZALAN-E-Portfolio/
 
 ## About
 
