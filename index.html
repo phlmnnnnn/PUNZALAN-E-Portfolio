@@ -11,8 +11,8 @@
 
 <style>
 :root{
-  --bg:#f6f7f9; --surface:#ffffff; --ink:#14213d; --muted:#5a6478; --line:#d9dde5;
-  --accent:#2f5bea; --accent-ink:#ffffff; --chip:#e8edfd;
+  --bg:#f6f7f9; --surface:#ffffff; --ink:#3d2014; --muted:#78645a; --line:#d9dde5;
+  --accent:#ea672f; --accent-ink:#ffffff; --chip:#e8edfd;
   --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
   --body:"Source Serif 4",Georgia,"Times New Roman",serif;
   box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
@@ -20,13 +20,13 @@
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#0f1524; --surface:#18203a; --ink:#e9edf7; --muted:#a2aac0; --line:#2b3556;
-    --accent:#7d9bff; --accent-ink:#0f1524; --chip:#222d52; color-scheme:dark;
+    --bg:#24160f; --surface:#3a2618; --ink:#e9edf7; --muted:#c0aba2; --line:#56392b;
+    --accent:#ff997d; --accent-ink:#24160f; --chip:#523522; color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
   --bg:#0f1524; --surface:#18203a; --ink:#e9edf7; --muted:#a2aac0; --line:#2b3556;
-  --accent:#7d9bff; --accent-ink:#0f1524; --chip:#222d52; color-scheme:dark;
+  --accent:#391405; --accent-ink:#24180f; --chip:#523422; color-scheme:dark;
 }
 html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 *,*::before,*::after{box-sizing:border-box}
@@ -41,13 +41,13 @@ nav a{font-family:var(--display);font-weight:500;text-decoration:none;color:var(
 nav a:hover{color:var(--accent)}
 .hero{padding:4rem 0 3.5rem;border-bottom:1px solid var(--line)}
 .hero h1{font-family:var(--display);font-weight:700;font-size:clamp(2.4rem,7vw,4.6rem);line-height:1.05;letter-spacing:-.02em;margin:0 0 1.25rem;max-width:16ch}
-.hero p{max-width:38rem;font-size:1.2rem;color:var(--muted);margin:0 0 1.75rem}
+.hero p{max-width:none;font-size:1.2rem;color:var(--muted);margin:0 0 1.75rem}
 .btns{display:flex;gap:.75rem;flex-wrap:wrap}
 .btn{font-family:var(--display);font-weight:500;text-decoration:none;padding:.7rem 1.2rem;border-radius:.5rem;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink)}
 .btn.alt{background:transparent;color:var(--accent)}
 section{padding:3.5rem 0;border-bottom:1px solid var(--line)}
 h2{font-family:var(--display);font-size:1.8rem;margin:0 0 1.5rem;letter-spacing:-.01em}
-.about p{max-width:40rem;margin:0 0 1rem}
+.about p{max-width:none;margin:0 0 1rem}
 .timeline{list-style:none;margin:0;padding:0}
 .timeline li{display:grid;grid-template-columns:9rem 1fr;gap:0 2rem;padding:0 0 2.5rem;position:relative}
 .timeline li:last-child{padding-bottom:0}
@@ -93,7 +93,7 @@ button.btn{cursor:pointer;font-size:1rem;line-height:inherit}
   <main id="top">
     <div class="hero">
       <h1>I build software and make sense of data.</h1>
-      <p>Computer science student at De La Salle University working across software development and statistical research, from JavaFX apps and web admin panels to nonparametric analysis in Python. I also design publications as a layout staffer at The LaSallian.</p>
+      <p>Computer science student at De La Salle University working across software development and statistical research. I also design publication materials as a layout staffer at The LaSallian.</p>
       <div class="btns">
         <a class="btn" href="#projects">See my projects</a>
         <a class="btn alt" href="assets/philomena_marie_punzalan_resume.pdf" download>Download resume</a>
@@ -102,12 +102,29 @@ button.btn{cursor:pointer;font-size:1rem;line-height:inherit}
 
     <section class="about" id="about">
       <h2>About</h2>
-      <p>I am a BS Computer Science student (Major in Software Technology) at De La Salle University, expected to graduate in 2028. I enjoy both sides of the work: building features people use, and testing whether the numbers behind a question hold up. My projects range from desktop and web applications to database systems and statistical studies.</p>
+      <p>I am a BS Computer Science student, major in Software Technology at De La Salle University, expected to graduate in 2028. I enjoy both sides of the work: building features people use, and testing whether the numbers behind a question hold up. My projects range from desktop and web applications to database systems and statistical studies.</p>
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
+      <h2>Technical Projects</h2>
       <ol class="timeline">
+        <li>
+          <div class="when">October 2026 – Current</div>
+          <div class="card">
+            <h3>Quality Assurance for PMLB Website (Po Lao Marquez Benedictos & Co.)</h3>
+            <ul class="chips">
+              <li>Jest</li>
+              <li>Supertest</li>
+              <li>Vitest</li>
+              <li>React Testing Library</li>
+              <li>Playwright</li>
+            </ul>
+            <p>Designed and automated tests for 3 features (client authentication, admin inquiry tracking, confirmation emails) across API, unit, component, and end-to-end layers using Jest, Supertest, Vitest, React Testing Library, and Playwright.</p>
+            <p>Wrote tests for invalid input and security cases (401/403 checks, bcrypt password hashing, session cookies, duplicate and malformed requests)</p>
+            <p>Integrated the tests into the team’s GitHub Actions pipeline, and merged them through a pull request with peer review.</p>
+            <p class="links"><a href="https://github.com/PLMB-CPA/plmb_website">GitHub Link</a></p>
+          </div>
+        </li>
         <li>
           <div class="when">May – Aug 2026</div>
           <div class="card">
@@ -154,11 +171,11 @@ button.btn{cursor:pointer;font-size:1rem;line-height:inherit}
         <li>
           <div class="when">Oct 2024 – present</div>
           <div class="card">
-            <h3>Layout Assistant Editor, The LaSallian</h3>
+            <h3>Staffer, The LaSallian</h3>
             <ul class="chips"><li>Layout</li><li>Design</li><li>Broadsheets</li><li>Magazines</li></ul>
             <p>I design the layout of broadsheets, magazines, and other publication materials circulated by The LaSallian, De La Salle University’s student publication. As Assistant Layout Editor, I helped the Layout Editor run daily operations, edit visuals, delegate responsibilities, and oversee section activities.</p>
             <p>Recognized as Staffer of the Month eight times for reliability and initiative.</p>
-            <p class="links"><a href="#">View published issues</a></p>
+            <p class="links"><a href="assets/punzalan_creative_portfolio.pdf">View creative portfolio</a></p>
           </div>
         </li>
         <li>
