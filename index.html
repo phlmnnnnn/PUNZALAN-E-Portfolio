@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Philomena Marie F. Punzalan – Software and Data Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f7f9; --surface:#ffffff; --ink:#14213d; --muted:#5a6478; --line:#d9dde5;
+  --accent:#2f5bea; --accent-ink:#ffffff; --chip:#e8edfd;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1524; --surface:#18203a; --ink:#e9edf7; --muted:#a2aac0; --line:#2b3556;
+    --accent:#7d9bff; --accent-ink:#0f1524; --chip:#222d52; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1524; --surface:#18203a; --ink:#e9edf7; --muted:#a2aac0; --line:#2b3556;
+  --accent:#7d9bff; --accent-ink:#0f1524; --chip:#222d52; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.65}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.25rem}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;gap:1rem;flex-wrap:wrap}
+header.top .brand{font-family:var(--display);font-weight:700;font-size:1.1rem;text-decoration:none;color:var(--ink)}
+nav{display:flex;gap:1.25rem;flex-wrap:wrap}
+nav a{font-family:var(--display);font-weight:500;text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--accent)}
+.hero{padding:4rem 0 3.5rem;border-bottom:1px solid var(--line)}
+.hero h1{font-family:var(--display);font-weight:700;font-size:clamp(2.4rem,7vw,4.6rem);line-height:1.05;letter-spacing:-.02em;margin:0 0 1.25rem;max-width:16ch}
+.hero p{max-width:38rem;font-size:1.2rem;color:var(--muted);margin:0 0 1.75rem}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{font-family:var(--display);font-weight:500;text-decoration:none;padding:.7rem 1.2rem;border-radius:.5rem;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink)}
+.btn.alt{background:transparent;color:var(--accent)}
+section{padding:3.5rem 0;border-bottom:1px solid var(--line)}
+h2{font-family:var(--display);font-size:1.8rem;margin:0 0 1.5rem;letter-spacing:-.01em}
+.about p{max-width:40rem;margin:0 0 1rem}
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{display:grid;grid-template-columns:9rem 1fr;gap:0 2rem;padding:0 0 2.5rem;position:relative}
+.timeline li:last-child{padding-bottom:0}
+.when{font-family:var(--display);font-weight:500;color:var(--muted);font-size:.95rem;padding-top:.3rem}
+.card{border-left:3px solid var(--accent);padding-left:1.25rem}
+.card h3{font-family:var(--display);font-size:1.3rem;margin:0 0 .5rem}
+.card p{margin:0 0 .75rem;max-width:40rem}
+.chips{display:flex;gap:.4rem;flex-wrap:wrap;margin:0 0 .75rem;padding:0;list-style:none}
+.chips li{background:var(--chip);color:var(--ink);font-family:var(--display);font-size:.85rem;padding:.15rem .6rem;border-radius:999px}
+.card .links a{font-family:var(--display);font-weight:500;margin-right:1rem}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.25rem}
+.skills div{background:var(--surface);border:1px solid var(--line);border-radius:.6rem;padding:1.1rem 1.25rem}
+.skills h3{font-family:var(--display);font-size:1.05rem;margin:0 0 .4rem}
+.skills p{margin:0;color:var(--muted)}
+.contact p{max-width:36rem}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem}
+button.theme{font-family:var(--display);background:none;border:1px solid var(--line);color:var(--muted);padding:.3rem .8rem;border-radius:999px;cursor:pointer}
+@media (max-width:40rem){
+  .timeline li{grid-template-columns:1fr;gap:.25rem}
+  .hero{padding:2.5rem 0}
+}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#top">Philomena Punzalan</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#involvement">Publications</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <button class="theme" id="themeBtn" type="button">Toggle theme</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <h1>I build software and make sense of data.</h1>
+      <p>Computer science student at De La Salle University working across software development and statistical research, from JavaFX apps and web admin panels to nonparametric analysis in Python. I also design publications as a layout staffer at The LaSallian.</p>
+      <div class="btns">
+        <a class="btn" href="#projects">See my projects</a>
+        <a class="btn alt" href="resume.pdf">Download resume</a>
+      </div>
+    </div>
+
+    <section class="about" id="about">
+      <h2>About</h2>
+      <p>I am a BS Computer Science student (Major in Software Technology) at De La Salle University, expected to graduate in 2028. I enjoy both sides of the work: building features people use, and testing whether the numbers behind a question hold up. My projects range from desktop and web applications to database systems and statistical studies.</p>
+      <p>I work well independently on focused tasks and prefer teams for design decisions and reviews. I am looking for internship and entry-level opportunities in software development or data analysis.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ol class="timeline">
+        <li>
+          <div class="when">May – Aug 2026</div>
+          <div class="card">
+            <h3>Webtoon Originals Data Analysis and Statistical Inference</h3>
+            <ul class="chips"><li>Python</li><li>Jupyter Notebook</li></ul>
+            <p>Ran Pearson correlation analysis on episode volume, platform tenure, views, likes, and subscribers. Views and likes showed moderate positive associations, while subscribers showed only weak correlation, suggesting subscriber growth is largely independent of structural factors alone.</p>
+            <p>Applied Kruskal-Wallis and Dunn’s post-hoc test (Bonferroni-corrected) across four structural tiers. Differences were statistically significant with large effect sizes for every outcome, indicating that engagement follows a tiered pattern in which content quality can substitute for sheer episode volume.</p>
+            <p class="links"><a href="https://github.com/phlmnnnnn">GitHub profile</a></p>
+          </div>
+        </li>
+        <li>
+          <div class="when">Feb – Mar 2026</div>
+          <div class="card">
+            <h3>Computer Laboratory Reservation System</h3>
+            <ul class="chips"><li>JavaScript</li><li>HTML</li><li>Handlebars</li></ul>
+            <p>Built the full admin panel for a lab reservation web app (CCAPDEV MP). Admins can view and edit user profiles, manage lab schedules, block time slots, and generate reports for lab technicians.</p>
+            <p class="links"><a href="https://github.com/phlmnnnnn">GitHub profile</a></p>
+          </div>
+        </li>
+        <li>
+          <div class="when">Oct – Nov 2025</div>
+          <div class="card">
+            <h3>SQL-Based Database System for K-pop Merch Transactions</h3>
+            <ul class="chips"><li>Python</li><li>JavaScript</li><li>HTML</li><li>SQL</li></ul>
+            <p>In a group project tracking albums, photocards, and lightsticks across company-led and fan-driven events, I developed the merchandise catalog, database schema, add-to-cart feature, and reporting tools.</p>
+            <p class="links"><a href="https://github.com/phlmnnnnn">GitHub profile</a></p>
+          </div>
+        </li>
+        <li>
+          <div class="when">Jul – Aug 2025</div>
+          <div class="card">
+            <h3>Coffee Truck Simulator</h3>
+            <ul class="chips"><li>Java</li><li>Swing</li><li>JavaFX</li></ul>
+            <p>In a paired object-oriented application simulating a mobile coffee truck business, I developed the truck creation system, which supports customizable regular and specialty trucks, and the JavaFX dashboard that displays aggregated sales and inventory data.</p>
+            <p class="links"><a href="https://github.com/phlmnnnnn">GitHub profile</a></p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="involvement">
+      <h2>Publications and involvement</h2>
+      <ol class="timeline">
+        <li>
+          <div class="when">Oct 2024 – present</div>
+          <div class="card">
+            <h3>Layout Assistant Editor, The LaSallian</h3>
+            <ul class="chips"><li>Layout</li><li>Design</li><li>Broadsheets</li><li>Magazines</li></ul>
+            <p>I design the layout of broadsheets, magazines, and other publication materials circulated by The LaSallian, De La Salle University’s student publication. As Assistant Layout Editor, I helped the Layout Editor run daily operations, edit visuals, delegate responsibilities, and oversee section activities.</p>
+            <p>Recognized as Staffer of the Month eight times for reliability and initiative.</p>
+            <p class="links"><a href="#">View published issues</a></p>
+          </div>
+        </li>
+        <li>
+          <div class="when">Jan 2026 – present</div>
+          <div class="card">
+            <h3>Student Assistant, START Program, De La Salle University</h3>
+            <p>I have logged about 167.5 hours digitizing and encoding library archive materials. So far I have processed around 25 boxes of vertical files, encoded roughly 35 folders across special collections, and catalogued 248 CDs. In summer 2025, I provided administrative support to the host department.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div><h3>Programming languages</h3><p>Python, SQL, Java, JavaScript, C, C#, Kotlin</p></div>
+        <div><h3>Web</h3><p>HTML, CSS, Handlebars, JavaScript</p></div>
+        <div><h3>Desktop and GUI</h3><p>JavaFX, Swing</p></div>
+        <div><h3>Tools</h3><p>GitHub, VS Code, Replit, IntelliJ IDEA</p></div>
+        <div><h3>Spoken languages</h3><p>Filipino, English</p></div>
+        <div><h3>Data and statistics</h3><p>Jupyter Notebook, correlation analysis, Kruskal-Wallis, Dunn’s post-hoc test</p></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact</h2>
+      <p>I am open to internships and entry-level roles. The best way to reach me is by email.</p>
+      <div class="btns">
+        <a class="btn" href="mailto:philomena.marie.punzalan@gmail.com">Email me</a>
+        <a class="btn alt" href="https://github.com/phlmnnnnn">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Philomena Marie F. Punzalan</footer>
+</div>
+<script>
+(function(){
+  var root=document.documentElement,btn=document.getElementById("themeBtn");
+  btn.addEventListener("click",function(){
+    var dark=root.getAttribute("data-theme")==="dark"||(root.getAttribute("data-theme")!=="light"&&window.matchMedia("(prefers-color-scheme: dark)").matches);
+    root.setAttribute("data-theme",dark?"light":"dark");
+  });
+})();
+</script>
+</body>
+</html>
